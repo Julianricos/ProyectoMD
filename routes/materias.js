@@ -15,7 +15,7 @@ router.get('/', async (req, res, next) => {
 // POST /api/materias → crea una materia nueva
 router.post('/', async (req, res, next) => {
   try {
-    const { nombre, descripcion } = req.body;
+       const { nombre, descripcion } = req.body || {};
 
     if (!nombre || !nombre.trim()) {
       return res.status(400).json({ error: 'El nombre de la materia es obligatorio' });
