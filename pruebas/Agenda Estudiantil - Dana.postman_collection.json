@@ -63,7 +63,7 @@
         "method": "DELETE",
         "header": [],
         "url": {
-          "raw": "http://localhost:3000/api/tareas/18",
+          "raw": "http://localhost:3000/api/tareas/21",
           "protocol": "http",
           "host": [
             "localhost"
@@ -72,7 +72,7 @@
           "path": [
             "api",
             "tareas",
-            "18"
+            "21"
           ]
         }
       },
@@ -93,7 +93,7 @@
           }
         },
         "url": {
-          "raw": "http://localhost:3000/api/tareas/18",
+          "raw": "http://localhost:3000/api/tareas/20",
           "protocol": "http",
           "host": [
             "localhost"
@@ -102,7 +102,7 @@
           "path": [
             "api",
             "tareas",
-            "18"
+            "20"
           ]
         }
       },
@@ -123,7 +123,7 @@
           }
         },
         "url": {
-          "raw": "http://localhost:3000/api/tareas/18/estado",
+          "raw": "http://localhost:3000/api/tareas/19/estado",
           "protocol": "http",
           "host": [
             "localhost"
@@ -132,7 +132,7 @@
           "path": [
             "api",
             "tareas",
-            "18",
+            "19",
             "estado"
           ]
         }
