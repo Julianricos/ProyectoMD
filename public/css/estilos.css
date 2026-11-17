@@ -1,0 +1,55 @@
+/* estilos.css (Leslie). Todo con prefijo ls- para no pisar agenda.css de Alexa.
+   No define body, .btn ni variables genéricas. */
+:root {
+  --ls-primario: #4f46e5;
+  --ls-primario-oscuro: #4338ca;
+  --ls-fondo: #f4f5fb;
+  --ls-texto: #1f2937;
+  --ls-borde: #e5e7eb;
+  --ls-error: #dc2626;
+  --ls-ok: #16a34a;
+}
+
+/* Base solo para mis páginas (se activa con <body class="ls-pagina">) */
+.ls-pagina {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--ls-fondo);
+  color: var(--ls-texto);
+}
+
+/* Barra de navegación */
+.ls-nav {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  padding: 10px 20px; background: #fff; border-bottom: 1px solid var(--ls-borde);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.ls-nav-marca { font-weight: 700; color: var(--ls-primario); margin-right: auto; text-decoration: none; }
+.ls-nav a.ls-nav-link {
+  padding: 8px 12px; border-radius: 8px; color: var(--ls-texto); text-decoration: none; font-size: 15px;
+}
+.ls-nav a.ls-nav-link:hover { background: var(--ls-fondo); }
+.ls-nav a.ls-nav-link.ls-activo { background: var(--ls-primario); color: #fff; }
+.ls-nav-salir {
+  padding: 8px 12px; border: 1px solid var(--ls-borde); border-radius: 8px;
+  background: #fff; color: var(--ls-texto); cursor: pointer; font-size: 15px;
+}
+.ls-nav-salir:hover { border-color: var(--ls-error); color: var(--ls-error); }
+
+/* Login / registro */
+.ls-auth-contenedor { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box; }
+.ls-auth { width: 100%; max-width: 380px; background: #fff; border: 1px solid var(--ls-borde); border-radius: 14px; padding: 28px; box-shadow: 0 6px 24px rgba(0,0,0,.06); }
+.ls-auth h1 { margin: 0 0 4px; font-size: 24px; }
+.ls-auth p.ls-sub { margin: 0 0 20px; color: #6b7280; font-size: 14px; }
+.ls-campo { margin-bottom: 14px; }
+.ls-campo label { display: block; margin-bottom: 4px; font-size: 14px; font-weight: 600; }
+.ls-campo input { width: 100%; box-sizing: border-box; padding: 10px 12px; border: 1px solid var(--ls-borde); border-radius: 8px; font-size: 15px; }
+.ls-campo input:focus { outline: 2px solid var(--ls-primario); border-color: transparent; }
+.ls-btn { width: 100%; padding: 11px; border: 0; border-radius: 8px; background: var(--ls-primario); color: #fff; font-size: 16px; cursor: pointer; }
+.ls-btn:hover { background: var(--ls-primario-oscuro); }
+.ls-btn:disabled { opacity: .6; cursor: wait; }
+.ls-mensaje { min-height: 20px; margin: 0 0 12px; font-size: 14px; }
+.ls-mensaje.ls-error { color: var(--ls-error); }
+.ls-mensaje.ls-ok { color: var(--ls-ok); }
+.ls-auth-pie { margin-top: 16px; text-align: center; font-size: 14px; }
+.ls-auth-pie a { color: var(--ls-primario); }
