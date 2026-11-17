@@ -1,0 +1,340 @@
+{
+  "info": {
+    "_postman_id": "32b8d530-e63d-4966-b45d-5b88aaa53af3",
+    "name": "Agenda Estudiantil - Dana",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "60238265",
+    "_collection_link": "https://go.postman.co/collection/60238265-32b8d530-e63d-4966-b45d-5b88aaa53af3?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Eventos - crear",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "      {\r\n     \"titulo\": \"Examen de prueba\",\r\n     \"descripcion\": \"Probando desde la colección\",\r\n     \"fecha\": \"2026-11-27\",\r\n     \"tipo\": \"Examen\"\r\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/eventos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "eventos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Eventos - listar",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/eventos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "eventos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "\tTareas - borrar",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/tareas/18",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "tareas",
+            "18"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Tareas - editar",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "     {\r\n     \"titulo\": \"Tarea de prueba editada\",\r\n     \"descripcion\": \"Ya la edité con PUT\",\r\n     \"fecha_entrega\": \"2026-11-25\",\r\n     \"estado\": \"En progreso\",\r\n     \"id_materia\": 5\r\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/tareas/18",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "tareas",
+            "18"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Tareas - cambiar estado",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "   { \"estado\": \"En progreso\" }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/tareas/18/estado",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "tareas",
+            "18",
+            "estado"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "\tTareas - crear",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "   {\r\n     \"titulo\": \"Tarea de prueba\",\r\n     \"descripcion\": \"Probando desde la colección\",\r\n     \"fecha_entrega\": \"2026-11-20\",\r\n     \"estado\": \"Pendiente\",\r\n     \"id_materia\": 5\r\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/tareas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "tareas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Materias - crear",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombre\": \"Materia de prueba\",\r\n  \"descripcion\": \"Probando desde la colección\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/materias",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "materias"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login Dana",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "   pm.collectionVariables.set(\"token\", pm.response.json().token);"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "   {\r\n     \"correo\": \"dana@demo.com\",\r\n     \"contrasena\": \"Demo1234\"\r\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Materias - listar",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/tareas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "tareas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Calendario",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/calendario",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "calendario"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Tareas - listar",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/tareas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "tareas"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "json_web_token_0640",
+      "secret": true
+    },
+    {
+      "key": "token",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_0izd",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_0izd",
+      "secret": true
+    }
+  ]
+}
