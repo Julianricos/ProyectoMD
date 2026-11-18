@@ -2,9 +2,16 @@
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Mis tareas · Agenda</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/agenda.css"></head>
+<link rel="stylesheet" href="css/estilos.css">
 <body>
-<!-- Aquí va la barra de navegación de Leslie -->
+<nav class="ls-nav">
+  <a class="ls-nav-marca" href="dashboard.html">📚 Agenda Estudiantil</a>
+  <a class="ls-nav-link" href="dashboard.html">Tareas</a>
+  <a class="ls-nav-link" href="calendario.html">Calendario</a>
+  <a class="ls-nav-link" href="grupos.html">Grupos</a>
+  <a class="ls-nav-link" href="repositorio.html">Repositorio</a>
+  <button type="button" class="ls-nav-salir" onclick="Sesion.cerrar()">Cerrar sesión</button>
+</nav>
 <main class="pagina">
   <section class="saludo">
     <div><h1 id="saludo">Hola</h1><p class="resumen" id="resumen"></p></div>
