@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calendario · Agenda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/agenda.css"></head>
+<body>
+<!-- Aquí va la barra de navegación de Leslie -->
+<main class="pagina">
+  <section class="saludo">
+    <div><h1>Tu calendario</h1><p class="resumen">Toca un día para agregar un evento, o un evento para ver su detalle.</p></div>
+    <button class="btn" id="nuevo">Nuevo evento</button>
+  </section>
+  <div class="cal-layout">
+    <div class="cal-caja"><div id="cal"></div></div>
+    <aside id="panel" aria-live="polite"></aside>
+  </div>
+</main>
+
+<dialog id="modal">
+  <form id="form">
+    <h2>Nuevo evento</h2>
+    <label>Título<input name="titulo" maxlength="150" required></label>
+    <div class="fila">
+      <label>Fecha<input name="fecha" type="date" required></label>
+      <label>Tipo<select name="tipo"><option>Examen</option><option>Entrega</option><option>Evento</option><option>Reunión</option></select></label>
+    </div>
+    <label>Notas<textarea name="descripcion" rows="3"></textarea></label>
+    <p class="error" id="errorForm"></p>
+    <div class="acciones"><button type="button" class="btn sec" id="cancelar">Cancelar</button><button class="btn">Guardar</button></div>
+  </form>
+</dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/locales/es.global.min.js"></script>
+<script src="js/api.js"></script> <!-- de Leslie: debe definir apiFetch -->
+<script src="js/utiles-alexa.js"></script>
+<script src="js/calendario.js"></script>
+</body></html>

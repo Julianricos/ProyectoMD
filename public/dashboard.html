@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mis tareas · Agenda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/agenda.css"></head>
+<body>
+<!-- Aquí va la barra de navegación de Leslie -->
+<main class="pagina">
+  <section class="saludo">
+    <div><h1 id="saludo">Hola</h1><p class="resumen" id="resumen"></p></div>
+    <button class="btn" id="nueva">Nueva tarea</button>
+  </section>
+  <section id="filtros" aria-label="Filtrar por estado"></section>
+  <div id="lista"></div>
+</main>
+
+<dialog id="modal">
+  <form id="form">
+    <h2 id="modalTitulo">Nueva tarea</h2>
+    <label>Título<input name="titulo" maxlength="150" required></label>
+    <label>Materia<select name="id_materia" id="selMateria"></select></label>
+    <label id="lblNueva" hidden>Nombre de la materia<input name="nueva_materia" maxlength="100"></label>
+    <div class="fila">
+      <label>Fecha de entrega<input name="fecha_entrega" type="date"></label>
+      <label>Estado<select name="estado"><option>Pendiente</option><option>En progreso</option><option>Completada</option></select></label>
+    </div>
+    <label>Notas<textarea name="descripcion" rows="3"></textarea></label>
+    <p class="error" id="errorForm"></p>
+    <div class="acciones"><button type="button" class="btn sec" id="cancelar">Cancelar</button><button class="btn">Guardar</button></div>
+  </form>
+</dialog>
+
+<dialog id="confirmar">
+  <h2>¿Eliminar tarea?</h2><p id="confirmaTexto"></p>
+  <div class="acciones"><button class="btn sec" id="noBorrar">Conservar</button><button class="btn peligro" id="siBorrar">Eliminar</button></div>
+</dialog>
+
+<script src="js/api.js"></script> <!-- de Leslie: debe definir apiFetch -->
+<script src="js/utiles-alexa.js"></script>
+<script src="js/tareas.js"></script>
+</body></html>
